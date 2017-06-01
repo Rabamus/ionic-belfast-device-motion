@@ -1,14 +1,37 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Motion Demo
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+    <div class="gforce-values">
+        <div class="gforce-item">
+            <div class="item-label">X</div>
+            <div class="item-value">{{ getGForce(x) }}</div>
+        </div>
+        <div class="gforce-item">
+            <div class="item-label">Y</div>
+            <div class="item-value">{{ getGForce(y) }}</div>
+        </div>
+        <div class="gforce-item">
+            <div class="item-label">Z</div>
+            <div class="item-value">{{ getGForce(z) }}</div>
+        </div>
+    </div>
+
+    <div class="graph-2-axis">
+        <div class="graph-canvas">
+            <ion-icon name="add" [style.left]="getPercent(x)" [style.top]="getPercent(y)"></ion-icon>
+        </div>
+    </div>
+
+    <div class="graph-1-axis">
+        <div class="graph-line" [style.left]="getPercent(z)"></div>
+    </div>
+
 </ion-content>

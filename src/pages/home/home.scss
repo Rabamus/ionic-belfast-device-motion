@@ -1,3 +1,76 @@
 page-home {
 
+    .graph-2-axis {
+        background-color: map-get($colors, light);
+        border: 1px solid map-get($colors, dark);
+        margin-bottom: 20px;
+
+        .graph-canvas {
+            overflow: hidden;
+            padding-bottom: 100%;
+            position: relative;
+            
+            ion-icon {
+                color: map-get($colors, primary);
+                position: absolute;
+                transform: translateX(-50%) translateY(-50%);
+                transition: all 100ms;
+            }
+        }
+    }
+
+    .graph-1-axis {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background-color: map-get($colors, light);
+        border: 1px solid map-get($colors, dark);
+        height: 25px;
+        overflow: hidden;
+        position: relative;
+
+        .graph-line {
+            background-color: map-get($colors, primary);
+            height: 100%;
+            left: 50%;
+            position: absolute;
+            top: 0px;
+            transform: translateX(-50%);
+            transition: all 100ms;
+            width: 1px;
+        }
+    }
+
+    .gforce-values {
+        display: flex;
+        margin-bottom: 20px;
+        width: 100%;
+
+        .gforce-item {
+            flex-grow: 1;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            width: 100%;
+
+            &:first-child { margin-left: 0; }
+            &:last-child { margin-right: 0; }
+
+            .item-label {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .item-value {
+                align-items: center;
+                background-color: map-get($colors, light);
+                border: 1px solid map-get($colors, dark);
+                color: map-get($colors, primary);
+                display: flex;
+                font-size: 18px;
+                height: 50px;
+                justify-content: center;
+            }
+        }
+    }
+
 }
